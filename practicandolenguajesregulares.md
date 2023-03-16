@@ -59,8 +59,6 @@ https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols
 
     d. List the strings in set $X^* Y^*$ of length four or less
 
-<!-- Let $X = \{aa, bb\}$ and $Y = \{\lambda, b, ab\}$. -->
-
     #|string|#|string|#|string
     -|-|-|-|-|-
     1 | aa | 2 | bb | 3 | b |
