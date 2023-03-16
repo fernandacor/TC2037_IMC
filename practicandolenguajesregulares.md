@@ -4,7 +4,7 @@ Reference for math symbols:
 https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols
 
 ## Names:
-- Alina Rosas A012
+- Alina Rosas A01252720
 - Fernanda Cantú A01782232
 
 
@@ -23,6 +23,7 @@ https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols
 
     **I. Basis:** b $\in$ X <br>
     **II. Recursive Step:** <br>
+
     **III. Closure:** <br>
 
 
@@ -58,10 +59,14 @@ https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols
 
     d. List the strings in set $X^* Y^*$ of length four or less
 
+<!-- Let $X = \{aa, bb\}$ and $Y = \{\lambda, b, ab\}$. -->
+
     #|string|#|string|#|string
     -|-|-|-|-|-
-
-
+    1 | aa | 2 | bb | 3 | b |
+    4 | ab | 5 | aab | 6 | aaab |
+    7 | bbb | 8 | bbab | 9 | aaaa |
+    10 | bbbb | 11 | abab | 12 | $\lambda$
 
 3. Give a recursive definition of the set $\{ a^ib^j | 0 ≤ i ≤ j ≤ 2i\}$
 
