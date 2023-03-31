@@ -261,3 +261,189 @@
 
 (pollito-lyrics)
 
+;crea una función que recibe una lista de animales y una lista de sonidos y devuelve una lista de pares de animales y sonidos
+;ESTA IMPRIME LOS ANIMALES Y SONIDOS CORRECTAMENTE PERO NO EN ORDEN 
+#lang racket
+
+(define animalList '("un pollito"
+                     "una gallina"
+                     "un gallo"
+                     "un pavo"
+                     "una paloma"
+                     "un gato"
+                     "un perro"
+                     "una cabra"
+                     "un cordero"
+                     "una vaca"
+                     "un toro"))
+
+(define soundsList '("y el pollito pio"
+                      "y la gallina coo"
+                      "y el gallo corocó"
+                      "y el pavo glú glú glú"
+                      "y la paloma ruu"
+                      "y el gato miao"
+                      "y el perro guau guau"
+                      "y la cabra mee"
+                      "y el cordero bee"
+                      "y la vaca moo"
+                      "y el toro muu"))
+
+(define (buildLyrics animalList soundsList)
+  (if (null? animalList)
+      (display "En la radio hay un tractor \n Y el tractor bruum \n Y el pollito: oh oh!")
+      (let ((current-animal (car animalList))
+            (rest-animals (cdr animalList)))
+        (let ((current-sound (car soundsList))
+              (rest-sounds (cdr soundsList)))
+          (begin
+            (display "En la radio hay ")
+            (displayln current-animal)
+            (displayln current-sound)
+            (for-each (lambda (sound)
+                        (display sound)
+                        (newline))
+                      rest-sounds))
+          (buildLyrics rest-animals rest-sounds)))))
+(buildLyrics animalList soundsList)
+
+;crea una función que recibe una lista de animales y una lista de sonidos y devuelve una lista de pares de animales y sonidos em reversa
+#lang racket
+
+(define animalList '("un pollito"
+                     "una gallina"
+                     "un gallo"
+                     "un pavo"
+                     "una paloma"
+                     "un gato"
+                     "un perro"
+                     "una cabra"
+                     "un cordero"
+                     "una vaca"
+                     "un toro"))
+
+(define soundsList '("y el pollito pio"
+                      "y la gallina coo"
+                      "y el gallo corocó"
+                      "y el pavo glú glú glú"
+                      "y la paloma ruu"
+                      "y el gato miao"
+                      "y el perro guau guau"
+                      "y la cabra mee"
+                      "y el cordero bee"
+                      "y la vaca moo"
+                      "y el toro muu"))
+
+(define (buildLyrics animalList soundsList)
+  (if (null? animalList)
+      (display "En la radio hay un tractor \n Y el tractor bruum \n Y el pollito: oh oh!")
+      (let ((current-animal (car animalList))
+            (rest-animals (cdr animalList)))
+        (let ((current-sound (car soundsList))
+              (rest-sounds (cdr soundsList)))
+          (begin
+            (display "En la radio hay ")
+            (displayln current-animal)
+            (displayln current-sound)
+            (for-each (lambda (sound)
+                        (display sound)
+                        (newline))
+                      rest-sounds))
+          (buildLyrics rest-animals rest-sounds)))))
+(buildLyrics (reverse animalList) (reverse soundsList))
+
+;crea una función que recibe una lista de animales y una lista de sonidos y devuelve una lista de pares de animales y sonidos en orden y que despliegue los
+;animales y sonidos que ya imprimió anteriormente conforme se recorre la lista
+
+#lang racket
+
+(define animalList '("un pollito"
+                     "una gallina"
+                     "un gallo"
+                     "un pavo"
+                     "una paloma"
+                     "un gato"
+                     "un perro"
+                     "una cabra"
+                     "un cordero"
+                     "una vaca"
+                     "un toro"))
+
+(define soundsList '("y el pollito pio"
+                      "y la gallina coo"
+                      "y el gallo corocó"
+                      "y el pavo glú glú glú"
+                      "y la paloma ruu"
+                      "y el gato miao"
+                      "y el perro guau guau"
+                      "y la cabra mee"
+                      "y el cordero bee"
+                      "y la vaca moo"
+                      "y el toro muu"))
+
+(define (buildLyrics animalList soundsList)
+  (if (null? animalList)
+      (display "En la radio hay un tractor \n Y el tractor bruum \n Y el pollito: oh oh!")
+      (let ((current-animal (car animalList))
+            (rest-animals (cdr animalList)))
+        (let ((current-sound (car soundsList))
+              (rest-sounds (cdr soundsList)))
+          (begin
+            (display "En la radio hay ")
+            (displayln current-animal)
+            (displayln current-sound)
+            (for-each (lambda (sound)
+                        (display sound)
+                        (newline))
+                      rest-sounds))
+          (buildLyrics rest-animals rest-sounds)))))
+(buildLyrics (reverse animalList) (reverse soundsList))
+
+;crea una función que recibe una lista de animales y una lista de sonidos y devuelve una lista de pares de animales y sonidos en orden y que despliegue los animales y sonidos que ya imprimió anteriormente conforme se recorre la lista
+#lang racket
+
+(define animalList '("un pollito"
+                     "una gallina"
+                     "un gallo"
+                     "un pavo"
+                     "una paloma"
+                     "un gato"
+                     "un perro"
+                     "una cabra"
+                     "un cordero"
+                     "una vaca"
+                     "un toro"))
+
+(define soundsList '("y el pollito pio"
+                      "y la gallina coo"
+                      "y el gallo corocó"
+                      "y el pavo glú glú glú"
+                      "y la paloma ruu"
+                      "y el gato miao"
+                      "y el perro guau guau"
+                      "y la cabra mee"
+                      "y el cordero bee"
+                      "y la vaca moo"
+                      "y el toro muu"))
+
+(define (buildLyrics animalList soundsList)
+  (if (null? animalList)
+      (display "En la radio hay un tractor \n Y el tractor bruum \n Y el pollito: oh oh!")
+      (let ((current-animal (car animalList))
+            (rest-animals (cdr animalList)))
+        (let ((current-sound (car soundsList))
+              (rest-sounds (cdr soundsList)))
+          (begin
+            (display "En la radio hay ")
+            (displayln current-animal)
+            (displayln current-sound)
+            (for-each (lambda (sound)
+                        (display sound)
+                        (newline))
+                      rest-sounds))
+          (buildLyrics rest-animals rest-sounds)))))
+(buildLyrics (reverse animalList) (reverse soundsList))
+
+
+
+
