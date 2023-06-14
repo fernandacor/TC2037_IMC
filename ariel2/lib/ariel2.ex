@@ -6,14 +6,12 @@ defmodule Hw.Ariel2 do
   Alina Rosas
 
   Entregado: 30/04/2023
-  Corregido: 11/06/2023
+  Corregido: 12/06/2023
   """
 
   # 3.- La función rotate-left toma dos entradas: un número entero n y una lista lst.
   # Devuelve la lista que resulta de rotar lst un total de n elementos a la
   #izquierda. Si n es negativo, rota a la derecha.
-
-  # NO ESTÁ FUNCIONANDO CUANDO N ES NEGATIVO
   def rotate_left([], _n), do: []
   def rotate_left(lst, n) when is_list(lst) do
     if n == 0 do
@@ -23,12 +21,12 @@ defmodule Hw.Ariel2 do
         [head | tail] = lst
         rotate_left(tail ++ [head], n - 1)
       else
-        [last | rest] = lst
-        rotate_left([rest | last], n + 1)
+        len = length(lst)
+        x = rem(n, len)
+        rotate_left(lst, len + x)
       end
     end
   end
-
 
   # 4.- La función prime-factors toma un número entero n como entrada (n ¿ 0) y
   # devuelve una lista que contiene los factores primos de n en orden ascendente.
